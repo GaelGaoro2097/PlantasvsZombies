@@ -1645,63 +1645,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7980827981607819060, guid: c601859cfa8db43908cbd040fa192589, type: 3}
   m_PrefabInstance: {fileID: 642283960}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &647455978
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 41728016047087183, guid: 52f1935f1408af14fa39841eb7c8b0a8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.65258616
-      objectReference: {fileID: 0}
-    - target: {fileID: 41728016047087183, guid: 52f1935f1408af14fa39841eb7c8b0a8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 41728016047087183, guid: 52f1935f1408af14fa39841eb7c8b0a8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.5852065
-      objectReference: {fileID: 0}
-    - target: {fileID: 41728016047087183, guid: 52f1935f1408af14fa39841eb7c8b0a8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 41728016047087183, guid: 52f1935f1408af14fa39841eb7c8b0a8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 41728016047087183, guid: 52f1935f1408af14fa39841eb7c8b0a8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 41728016047087183, guid: 52f1935f1408af14fa39841eb7c8b0a8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 41728016047087183, guid: 52f1935f1408af14fa39841eb7c8b0a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 41728016047087183, guid: 52f1935f1408af14fa39841eb7c8b0a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 41728016047087183, guid: 52f1935f1408af14fa39841eb7c8b0a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8062366854748675367, guid: 52f1935f1408af14fa39841eb7c8b0a8, type: 3}
-      propertyPath: m_Name
-      value: Sun
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 52f1935f1408af14fa39841eb7c8b0a8, type: 3}
 --- !u!1 &680221933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1917,6 +1860,115 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 990650431815637021, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
   m_PrefabInstance: {fileID: 726972173}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &752987657
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 752987659}
+  - component: {fileID: 752987658}
+  m_Layer: 0
+  m_Name: SunSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &752987658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752987657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e88638d19306f4992bf9a4d8325756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SunSpawner
+  laneManager: {fileID: 1519555358}
+  spawnInterval: 4
+  offsetY: 1
+  sunPrefab: {fileID: 8062366854748675367, guid: 52f1935f1408af14fa39841eb7c8b0a8, type: 3}
+--- !u!4 &752987659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752987657}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.8859, y: 3.83348, z: 4.84942}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &758341085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 758341087}
+  - component: {fileID: 758341086}
+  m_Layer: 0
+  m_Name: SceneController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &758341086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758341085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02cad55dc414553438119c074f299e5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneController
+  onSceneStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 400368392}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayMusic
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: game_music
+          m_BoolArgument: 0
+        m_CallState: 2
+  fade: {fileID: 1894949621}
+  fadeAnimationName: FadeOut
+--- !u!4 &758341087
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758341085}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.8859, y: 3.83348, z: 4.84942}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &761287959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1992,7 +2044,7 @@ GameObject:
   - component: {fileID: 873218488}
   - component: {fileID: 873218487}
   - component: {fileID: 873218489}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Peashooter
   m_TagString: Plant
   m_Icon: {fileID: 0}
@@ -2098,6 +2150,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DetectTarget
   targetTag: Zombie
   rayHeighOffset: 0.5
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!114 &881780302 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1001558681865938470, guid: 92971aa24366ce34d99c2775190a12a4, type: 3}
@@ -2109,6 +2164,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
+--- !u!1 &932153252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 932153254}
+  - component: {fileID: 932153253}
+  m_Layer: 0
+  m_Name: SunManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &932153253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932153252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac0dc92f3e094346bfb6cb56746b43c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SunManager
+  sunText: {fileID: 1329694543}
+--- !u!4 &932153254
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932153252}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.8859, y: 3.83348, z: 4.84942}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &969045763
 GameObject:
   m_ObjectHideFlags: 0
@@ -2573,6 +2673,89 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 990650431815637021, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
   m_PrefabInstance: {fileID: 1105615103}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1115638468
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1115638470}
+  - component: {fileID: 1115638469}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1115638469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115638468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3197a047f6290be4087d5921765a801d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelManager
+  onLevelStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1595047585}
+        m_TargetAssemblyTypeName: ClickRaycast, Assembly-CSharp
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 932153253}
+        m_TargetAssemblyTypeName: SunManager, Assembly-CSharp
+        m_MethodName: Initialize
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 752987658}
+        m_TargetAssemblyTypeName: SunSpawner, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!4 &1115638470
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115638468}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.8859, y: 3.83348, z: 4.84942}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1182189326
 GameObject:
   m_ObjectHideFlags: 0
@@ -4145,8 +4328,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1894949620}
   - {fileID: 10652492}
+  - {fileID: 1894949620}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4613,8 +4796,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1519555357}
+  - component: {fileID: 1519555358}
   m_Layer: 0
-  m_Name: Lanes
+  m_Name: LaneManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4637,6 +4821,21 @@ Transform:
   - {fileID: 1182189327}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1519555358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519555356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4a3ac884a2e3940b912e4f8c577d43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LaneManager
+  lanes:
+  - {fileID: 1511286097}
+  - {fileID: 1182189328}
 --- !u!1001 &1522192220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4856,7 +5055,19 @@ MonoBehaviour:
   sunTag: Sun
   onSunClicked:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 932153253}
+        m_TargetAssemblyTypeName: SunManager, Assembly-CSharp
+        m_MethodName: AddSun
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1595047586
 Transform:
   m_ObjectHideFlags: 0
@@ -4947,7 +5158,7 @@ GameObject:
   - component: {fileID: 1639943135}
   - component: {fileID: 1639943138}
   - component: {fileID: 1639943137}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Zombie
   m_TagString: Zombie
   m_Icon: {fileID: 0}
@@ -4986,7 +5197,19 @@ MonoBehaviour:
   healthSlider: {fileID: 881780302}
   onDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1639943138}
+        m_TargetAssemblyTypeName: Zombie, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onTakeDamage:
     m_PersistentCalls:
       m_Calls: []
@@ -5025,6 +5248,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DetectTarget
   targetTag: Plant
   rayHeighOffset: 0.5
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!114 &1639943138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5408,15 +5634,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6938242021199904115, guid: c8a9462a4c9d2fa42b5ada915f1ec273, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6938242021199904115, guid: c8a9462a4c9d2fa42b5ada915f1ec273, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6938242021199904115, guid: c8a9462a4c9d2fa42b5ada915f1ec273, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6938242021199904115, guid: c8a9462a4c9d2fa42b5ada915f1ec273, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -5446,6 +5672,11 @@ PrefabInstance:
 --- !u!224 &1894949620 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6938242021199904115, guid: c8a9462a4c9d2fa42b5ada915f1ec273, type: 3}
+  m_PrefabInstance: {fileID: 1894949619}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1894949621 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 802924757943307654, guid: c8a9462a4c9d2fa42b5ada915f1ec273, type: 3}
   m_PrefabInstance: {fileID: 1894949619}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1958680411
@@ -5916,4 +6147,7 @@ SceneRoots:
   - {fileID: 400368391}
   - {fileID: 1588732177}
   - {fileID: 1595047586}
-  - {fileID: 647455978}
+  - {fileID: 932153254}
+  - {fileID: 752987659}
+  - {fileID: 1115638470}
+  - {fileID: 758341087}

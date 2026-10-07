@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8851477216582765734}
   m_Layer: 6
   m_Name: Sun
-  m_TagString: Untagged
+  m_TagString: Sun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,9 +90,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52ac42ba8edb9d344b8a6d283b9b02be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Sun
-  value: 0
+  value: 25
   sunParticles: {fileID: 4553287630450876385, guid: 15483e51212e3d74886ea57291f4639a, type: 3}
   collectSound: Sun
+  duration: 4
 --- !u!1001 &463570244983252657
 PrefabInstance:
   m_ObjectHideFlags: 0

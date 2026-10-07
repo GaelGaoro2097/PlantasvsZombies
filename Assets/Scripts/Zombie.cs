@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections;
- 
 public class Zombie : Character
 {
     [SerializeField]
@@ -18,7 +17,8 @@ public class Zombie : Character
     public override void Die()
     {
         ActivateTargetDetection(false);
-        SoundManager.instance.Play(zombieData.appearSound);
+        SoundManager.instance.Play(zombieData.deathSound);
+        PoolManager.Instance.GetObject(zombieData.deathParticles, transform.position);
         base.Die();
     }
     private void OnEnable()
@@ -55,22 +55,22 @@ public class Zombie : Character
     }
     private void Attack()
     {
-        if(!canAttack) return;
+        if (!canAttack) return;
         StartCoroutine(PerformAttack());
     }
     private IEnumerator PerformAttack()
     {
         canAttack = false;
-        SoundManager.instance.Play(zombieData.appearSound);
-        characterAnimator.Play("Attack",0,0f);
+        SoundManager.instance.Play(zombieData.attackSound);
+        characterAnimator.Play("Attack", 0, 0f);
         yield return new WaitForSeconds(zombieData.attackCooldown);
         currentTarget.TakeDamage(zombieData.damage);
+        SoundManager.instance.Play(zombieData.hitSound);
         PoolManager.Instance.GetObject(zombieData.attackParticles, currentTarget.transform.position);
         if (currentTarget.IsDead) currentTarget = null;
         yield return new WaitForSeconds(zombieData.attackCooldown);
         canAttack = true;
     }
- 
     private void Move()
     {
         transform.Translate(Vector3.forward * zombieData.moveSpeed * Time.deltaTime);
@@ -78,8 +78,8 @@ public class Zombie : Character
     }
     private void OnTargetDetected(Health target)
     {
-        if(target.IsDead || currentTarget == target) return;
-        if(currentTarget != null)
+        if (target.IsDead || currentTarget == target) return;
+        if (currentTarget != null)
         {
             float distance = Vector3.Distance(transform.position, target.transform.position);
             float newDistance = Vector3.Distance(transform.position, currentTarget.transform.position);
