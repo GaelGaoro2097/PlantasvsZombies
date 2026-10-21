@@ -2,29 +2,30 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
  
-public class Flower : Character
+public class Flower : Plant
 {
     [SerializeField]
-    private Collider zoneDetector;
+    private FlowerData flowerData;
     [SerializeField]
-    private FlowerData flowerData;    
+    private FlowerZoneDetector zoneDetector;    
     private List<Transform> zones = new List<Transform>();
     protected override void Awake()
     {
         base.Awake();
         health.SetMaxHealth(flowerData.maxHealth);
+        zoneDetector.Flower = this;
     }
     protected override void OnEnable()
     {
-        base.OnEnable();
-        zoneDetector.enabled = false;
+       zoneDetector.DeactivateDetector();
         zones.Clear();
-        SoundManager.instance.Play(flowerData.appearSound);
+        base.OnEnable();
+        //SoundManager.instance.Play(flowerData.appearSound);
     }
     public override void Initialize()
     {
         base.Initialize();
-        zoneDetector.enabled = true;
+        zoneDetector.ActiveDetector();
         StartCoroutine(GenerateSun());
     }
     private void OnTriggerEnter(Collider other)
@@ -57,6 +58,14 @@ public class Flower : Character
         base.Die();
         SoundManager.instance.Play(flowerData.deathSound);
         zoneDetector.enabled = false;
+    }
+
+    public void AddZone(Transform zone)
+    {
+        if (!zones.Contains(zone))
+        {
+            zones.Add(zone);
+        }
     }
  
  
