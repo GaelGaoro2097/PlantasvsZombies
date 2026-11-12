@@ -21,7 +21,7 @@ public class Peashooter : Plant
     {
         currentTarget = null;
         base.OnEnable();
-        //SoundManager.instance.Play(shooterPlantData.appearSound);
+        SoundManager.instance.Play(shooterPlantData.appearSound);
         health.Initialize();
     }
     public override void Initialize()
@@ -57,7 +57,7 @@ public class Peashooter : Plant
     }
     private void Attack()
     {
-        //SoundManager.instance.Play(shooterPlantData.shootTime);
+        SoundManager.instance.Play(shooterPlantData.attackSound);
         canAttack = false;
         StartCoroutine(AttackRoutine());
     }
@@ -72,7 +72,7 @@ public class Peashooter : Plant
         characterAnimator.Play("Shoot", 0, 0f);
         yield return new WaitForSeconds(shooterPlantData.shootTime);
         GameObject bullet = PoolManager.Instance.GetObject(shooterPlantData.bulletPrefab,
-            shootPivot.position,true);
+            shootPivot.position, true);
             //bullet.SetActive(false);
             bullet.GetComponent<Bullet>().Damage = shooterPlantData.damage;
             bullet.transform.position = shootPivot.position;
@@ -88,3 +88,5 @@ public class Peashooter : Plant
         base.Die();
     }
 }
+ 
+ 

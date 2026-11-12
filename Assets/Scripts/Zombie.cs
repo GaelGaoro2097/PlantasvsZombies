@@ -1,11 +1,15 @@
 using UnityEngine;
 using System.Collections;
+using System;
 public class Zombie : Character
 {
     [SerializeField]
     private ZombieData zombieData;
     private DetectTarget detectTarget;
     private Health currentTarget;
+    public event Action<Zombie> onDie;
+    public event Action onWin;
+    private bool hasWon;
     private bool canAttack;
     protected override void Awake()
     {
@@ -14,26 +18,35 @@ public class Zombie : Character
         detectTarget = GetComponent<DetectTarget>();
         detectTarget.SetRange(zombieData.attackRange);
     }
+    public void Win()
+    {
+        characterAnimator.Play("Dance");
+        hasWon = true;
+        StopAllCoroutines();
+        characterCollider.enabled = false;
+        ActivateTargetDetection(false);
+    }
     public override void Die()
     {
         ActivateTargetDetection(false);
         SoundManager.instance.Play(zombieData.deathSound);
         PoolManager.Instance.GetObject(zombieData.deathParticles, transform.position);
+        onDie?.Invoke(this);
         base.Die();
     }
     protected override void OnEnable()
     {
-        //SoundManager.instance.Play(zombieData.appearSound);
+        SoundManager.instance.Play(zombieData.appearSound);
         currentTarget = null;
-       base.OnEnable();
+        base.OnEnable();
         health.Initialize();
     }
     public override void Initialize()
-    {
-        base.Initialize();
-        canAttack = true;
-        ActivateTargetDetection(true);
-    }
+        {
+            base.Initialize();
+            canAttack = true;
+            ActivateTargetDetection(true);
+        }
     private void ActivateTargetDetection(bool isActive)
     {
         detectTarget.SetActive(isActive);
@@ -48,7 +61,7 @@ public class Zombie : Character
     }
     private void Update()
     {
-        if (health.IsDead) return;
+        if (health.IsDead || hasWon) return;
         if (currentTarget == null)
         {
             Move();
@@ -56,6 +69,13 @@ public class Zombie : Character
         else
         {
             Attack();
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("House"))
+        {
+            onWin?.Invoke();
         }
     }
     private void Attack()

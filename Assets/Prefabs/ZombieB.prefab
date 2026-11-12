@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5795798995538231588}
   - component: {fileID: 956417266537998979}
   - component: {fileID: 7189960901438813285}
+  - component: {fileID: 4409610104776606073}
   m_Layer: 8
   m_Name: ZombieB
   m_TagString: Zombie
@@ -56,8 +57,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 2.31, z: 1}
-  m_Center: {x: 0, y: 1.12, z: 0}
+  m_Size: {x: 2.0533388, y: 2.31, z: 1}
+  m_Center: {x: 0.06330761, y: 1.1200001, z: 1.1477085e-17}
 --- !u!114 &5795798995538231588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,6 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Zombie
   characterAnimator: {fileID: 6403399165216196757}
   initialRotationY: 270
+  blinkDuration: 3
   zombieData: {fileID: 11400000, guid: 3951d22ab123cdc4a8be803529ab8452, type: 2}
 --- !u!114 &7189960901438813285
 MonoBehaviour:
@@ -121,6 +123,19 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &4409610104776606073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3175132371183558648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fd40f73798c4954d80bf7d86b50f99e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Blink
+  blinkInterval: 0.2
 --- !u!1001 &5475982600773961125
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ TagManager:
   - Zombie
   - Sun
   - Zone
+  - House
   layers:
   - Default
   - TransparentFX
