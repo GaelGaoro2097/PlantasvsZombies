@@ -16,24 +16,17 @@ public class Flower : Plant
         zoneDetector.Flower = this;
     }
     protected override void OnEnable()
-    {
-       zoneDetector.DeactivateDetector();
+    {      
+        zoneDetector.DeactivateDetector();
         zones.Clear();
         base.OnEnable();
-        //SoundManager.instance.Play(flowerData.appearSound);
+        SoundManager.instance.Play(flowerData.appearSound);
     }
     public override void Initialize()
     {
         base.Initialize();
-        zoneDetector.ActiveDetector();
+        zoneDetector.ActivateDetector();
         StartCoroutine(GenerateSun());
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Zone"))
-        {
-            zones.Add(other.transform);
-        }
     }
     private IEnumerator GenerateSun()
     {
@@ -50,6 +43,8 @@ public class Flower : Plant
                 }
                 SoundManager.instance.Play(flowerData.attackSound);
                 characterAnimator.Play("Attack", 0, 0f);
+                PoolManager.Instance.GetObject(flowerData.sunParticlePrefab,
+                    transform.position);
             }
         }
     }
@@ -57,9 +52,8 @@ public class Flower : Plant
     {
         base.Die();
         SoundManager.instance.Play(flowerData.deathSound);
-        zoneDetector.enabled = false;
+        zoneDetector.DeactivateDetector();
     }
-
     public void AddZone(Transform zone)
     {
         if (!zones.Contains(zone))
@@ -67,6 +61,4 @@ public class Flower : Plant
             zones.Add(zone);
         }
     }
- 
- 
 }

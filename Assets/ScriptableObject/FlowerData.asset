@@ -17,6 +17,7 @@ MonoBehaviour:
   deathSound: peashooter_die
   maxHealth: 100
   sunPrefab: {fileID: 8062366854748675367, guid: 52f1935f1408af14fa39841eb7c8b0a8, type: 3}
-  sunOffsetY: 0
+  sunOffsetY: 2
   sunInterval: 5
-  sunAmount: 0
+  sunAmount: 1
+  sunParticlePrefab: {fileID: 3587749490203900752, guid: ccb3ffbf6420b564f8b1c16cda420e6e, type: 3}

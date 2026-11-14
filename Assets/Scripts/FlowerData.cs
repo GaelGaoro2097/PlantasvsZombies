@@ -7,4 +7,5 @@ public class FlowerData : PlantData
     public float sunOffsetY;
     public float sunInterval;
     public int sunAmount;
+    public GameObject sunParticlePrefab;
 }

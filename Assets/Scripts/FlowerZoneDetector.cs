@@ -1,24 +1,24 @@
 using UnityEngine;
-
+ 
 public class FlowerZoneDetector : MonoBehaviour
 {
-[SerializeField]
-private Collider zoneDetector;
-private Flower flower;
-public Flower Flower { set { flower = value; } }
-private void OnTriggerEnter(Collider other)
+    [SerializeField]
+    private Collider zoneDetector;
+    private Flower flower;
+    public Flower Flower { set { flower = value; } }
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Zone"))
         {
             flower.AddZone(other.transform);
         }
     }
-public void ActiveDetector()
+    public void ActivateDetector()
     {
         zoneDetector.enabled = true;
-    }    
-public void DeactivateDetector()
+    }
+    public void DeactivateDetector()
     {
         zoneDetector.enabled = false;
-    }    
+    }
 }
