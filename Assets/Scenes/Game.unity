@@ -2256,6 +2256,83 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7980827981607819060, guid: c601859cfa8db43908cbd040fa192589, type: 3}
   m_PrefabInstance: {fileID: 483573177}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &498927339
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1239036955052456339, guid: ce189e4afbd83f34a99f35496cc18427, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1239036955052456339, guid: ce189e4afbd83f34a99f35496cc18427, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1239036955052456339, guid: ce189e4afbd83f34a99f35496cc18427, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802615392455375009, guid: ce189e4afbd83f34a99f35496cc18427, type: 3}
+      propertyPath: m_Name
+      value: SunFlower
+      objectReference: {fileID: 0}
+    - target: {fileID: 5420814847749338313, guid: ce189e4afbd83f34a99f35496cc18427, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5420814847749338313, guid: ce189e4afbd83f34a99f35496cc18427, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002896323116013443, guid: ce189e4afbd83f34a99f35496cc18427, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.168135
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002896323116013443, guid: ce189e4afbd83f34a99f35496cc18427, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.624963
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002896323116013443, guid: ce189e4afbd83f34a99f35496cc18427, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.792078
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002896323116013443, guid: ce189e4afbd83f34a99f35496cc18427, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002896323116013443, guid: ce189e4afbd83f34a99f35496cc18427, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002896323116013443, guid: ce189e4afbd83f34a99f35496cc18427, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002896323116013443, guid: ce189e4afbd83f34a99f35496cc18427, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002896323116013443, guid: ce189e4afbd83f34a99f35496cc18427, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002896323116013443, guid: ce189e4afbd83f34a99f35496cc18427, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002896323116013443, guid: ce189e4afbd83f34a99f35496cc18427, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ce189e4afbd83f34a99f35496cc18427, type: 3}
 --- !u!1 &504900925
 GameObject:
   m_ObjectHideFlags: 0
@@ -5700,10 +5777,6 @@ MonoBehaviour:
             m_StringArgument: game_music
             m_BoolArgument: 0
           m_CallState: 2
-  - eventName: AnimationEnd
-    callback:
-      m_PersistentCalls:
-        m_Calls: []
   - eventName: AnimationEnd
     callback:
       m_PersistentCalls:
@@ -10974,7 +11047,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1118245938}
         m_TargetAssemblyTypeName: PlantCreator, Assembly-CSharp
-        m_MethodName: StopPlants
+        m_MethodName: StopPlant
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12532,3 +12605,4 @@ SceneRoots:
   - {fileID: 781450731}
   - {fileID: 1118245939}
   - {fileID: 1868163206}
+  - {fileID: 498927339}

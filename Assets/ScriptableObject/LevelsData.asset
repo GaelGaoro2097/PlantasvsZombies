@@ -23,43 +23,70 @@ MonoBehaviour:
     - enemyPrefab: {fileID: 1470212464140563603, guid: badd3fcac5d0f364abac848678ae63f7, type: 3}
       spawnTime: 8
       laneIndex: 1
-    - enemyPrefab: {fileID: 3175132371183558648, guid: b9b3d696f105022408ebe04c9ed950d9, type: 3}
-      spawnTime: 10
-      laneIndex: 4
+  - enemies:
     - enemyPrefab: {fileID: 1470212464140563603, guid: badd3fcac5d0f364abac848678ae63f7, type: 3}
+      spawnTime: 4
+      laneIndex: 0
+    - enemyPrefab: {fileID: 3175132371183558648, guid: b9b3d696f105022408ebe04c9ed950d9, type: 3}
+      spawnTime: 7
+      laneIndex: 3
+    - enemyPrefab: {fileID: 1470212464140563603, guid: badd3fcac5d0f364abac848678ae63f7, type: 3}
+      spawnTime: 10
+      laneIndex: 1
+    - enemyPrefab: {fileID: 3175132371183558648, guid: b9b3d696f105022408ebe04c9ed950d9, type: 3}
       spawnTime: 12
       laneIndex: 2
     - enemyPrefab: {fileID: 1470212464140563603, guid: badd3fcac5d0f364abac848678ae63f7, type: 3}
+      spawnTime: 15
+      laneIndex: 4
+  - enemies:
+    - enemyPrefab: {fileID: 1470212464140563603, guid: badd3fcac5d0f364abac848678ae63f7, type: 3}
+      spawnTime: 5
+      laneIndex: 0
+    - enemyPrefab: {fileID: 3175132371183558648, guid: b9b3d696f105022408ebe04c9ed950d9, type: 3}
+      spawnTime: 9
+      laneIndex: 3
+    - enemyPrefab: {fileID: 1470212464140563603, guid: badd3fcac5d0f364abac848678ae63f7, type: 3}
       spawnTime: 13
+      laneIndex: 2
+    - enemyPrefab: {fileID: 3175132371183558648, guid: b9b3d696f105022408ebe04c9ed950d9, type: 3}
+      spawnTime: 16
+      laneIndex: 1
+    - enemyPrefab: {fileID: 1470212464140563603, guid: badd3fcac5d0f364abac848678ae63f7, type: 3}
+      spawnTime: 22
+      laneIndex: 4
+    - enemyPrefab: {fileID: 3175132371183558648, guid: b9b3d696f105022408ebe04c9ed950d9, type: 3}
+      spawnTime: 25
       laneIndex: 0
+    - enemyPrefab: {fileID: 1470212464140563603, guid: badd3fcac5d0f364abac848678ae63f7, type: 3}
+      spawnTime: 30
+      laneIndex: 2
   - enemies:
     - enemyPrefab: {fileID: 1470212464140563603, guid: badd3fcac5d0f364abac848678ae63f7, type: 3}
-      spawnTime: 1
+      spawnTime: 3
       laneIndex: 0
     - enemyPrefab: {fileID: 3175132371183558648, guid: b9b3d696f105022408ebe04c9ed950d9, type: 3}
-      spawnTime: 2
+      spawnTime: 10
       laneIndex: 3
     - enemyPrefab: {fileID: 1470212464140563603, guid: badd3fcac5d0f364abac848678ae63f7, type: 3}
-      spawnTime: 3
-      laneIndex: 1
-  - enemies:
+      spawnTime: 15
+      laneIndex: 2
     - enemyPrefab: {fileID: 1470212464140563603, guid: badd3fcac5d0f364abac848678ae63f7, type: 3}
-      spawnTime: 1
+      spawnTime: 22
+      laneIndex: 1
+    - enemyPrefab: {fileID: 1470212464140563603, guid: badd3fcac5d0f364abac848678ae63f7, type: 3}
+      spawnTime: 26
+      laneIndex: 4
+    - enemyPrefab: {fileID: 1470212464140563603, guid: badd3fcac5d0f364abac848678ae63f7, type: 3}
+      spawnTime: 30
+      laneIndex: 1
+    - enemyPrefab: {fileID: 1470212464140563603, guid: badd3fcac5d0f364abac848678ae63f7, type: 3}
+      spawnTime: 34
       laneIndex: 0
-    - enemyPrefab: {fileID: 3175132371183558648, guid: b9b3d696f105022408ebe04c9ed950d9, type: 3}
-      spawnTime: 2
+    - enemyPrefab: {fileID: 1470212464140563603, guid: badd3fcac5d0f364abac848678ae63f7, type: 3}
+      spawnTime: 37
+      laneIndex: 2
+    - enemyPrefab: {fileID: 1470212464140563603, guid: badd3fcac5d0f364abac848678ae63f7, type: 3}
+      spawnTime: 40
       laneIndex: 3
-    - enemyPrefab: {fileID: 1470212464140563603, guid: badd3fcac5d0f364abac848678ae63f7, type: 3}
-      spawnTime: 3
-      laneIndex: 1
-  - enemies:
-    - enemyPrefab: {fileID: 1470212464140563603, guid: badd3fcac5d0f364abac848678ae63f7, type: 3}
-      spawnTime: 1
-      laneIndex: 0
-    - enemyPrefab: {fileID: 3175132371183558648, guid: b9b3d696f105022408ebe04c9ed950d9, type: 3}
-      spawnTime: 2
-      laneIndex: 3
-    - enemyPrefab: {fileID: 1470212464140563603, guid: badd3fcac5d0f364abac848678ae63f7, type: 3}
-      spawnTime: 3
-      laneIndex: 1
-  currentIndex: 0
+  currentIndex: 1

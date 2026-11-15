@@ -103,7 +103,7 @@ MonoBehaviour:
   characterAnimator: {fileID: 3430061317432693199}
   initialRotationY: 90
   blinkDuration: 3
-  price: 50
+  price: 100
   maxHealth: 200
 --- !u!114 &2486718869176865016
 MonoBehaviour:
